@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Concert>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Concerts List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Concert" asp-action="create" class="btn btn-primary">
+               <i class="bi bi-plus-circle"></i> &nbsp;Create New Concert
+            </a>
+        </div>
+    </div>
+
+<div class="table-responsive mt-2" >
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Concert Name</th>
+                <th>Artist Name</th>
+                <th>Concert Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model)
+            {
+                <tr>
+                    <td>@obj.concertName</td>
+                    <td>@obj.artistName</td>
+                    <td>@obj.concertDate.ToShortDateString()</td>
+                    <td style="text-align:center">
+                        <div class="btn-group" role="group">
+                            <a asp-controller="concert" asp-action="Edit" asp-route-id="@obj.id" class="btn btn-primary mx-2" style="width:100px">
+                            <i class="bi bi-pencil-square "></i> &nbsp;Edit
+                            </a>
+                            <form asp-controller="Concert" asp-action="Delete" asp-route-id="@obj.id" method="post" onsubmit="return confirm('Are you sure you want to delete this concert?')">
+                                <input type="hidden" name="id" value="@obj.id" />
+                                <button type="submit" class="btn btn-outline-primary" style="width:100px">
+                                    <i class="bi bi-trash3-fill"></i> &nbsp;Delete
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</div>

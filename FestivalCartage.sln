@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FestivalCartage", "FestivalCartage\FestivalCartage.csproj", "{BB396DFC-12A5-4DDE-AB2C-6AFA925F2EBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB396DFC-12A5-4DDE-AB2C-6AFA925F2EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB396DFC-12A5-4DDE-AB2C-6AFA925F2EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB396DFC-12A5-4DDE-AB2C-6AFA925F2EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB396DFC-12A5-4DDE-AB2C-6AFA925F2EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BA9F173-59E8-409F-8AA7-4EC978BEE0EC}
+	EndGlobalSection
+EndGlobal
